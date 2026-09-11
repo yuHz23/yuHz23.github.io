@@ -160,12 +160,6 @@ section h2::before {
 .project .tech { font-size:.8rem; color:var(--muted); font-style:italic; margin-bottom:8px; }
 .project .desc { font-size:.88rem; color:var(--text); line-height:1.55; }
 .project .desc strong { color:#fff; }
-.project .links-row { margin-top:10px; display:flex; gap:8px; flex-wrap:wrap; }
-.project .links-row a {
-  font-size:.75rem; font-weight:600; padding:4px 12px; border-radius:6px;
-  text-decoration:none; transition:all .2s; border:1px solid var(--border); color:var(--muted);
-}
-.project .links-row a:hover { border-color:var(--accent); color:var(--accent); background:rgba(94,234,212,.06); }
 
 /* Experience */
 .exp-item {
@@ -306,37 +300,25 @@ footer {
     <div class="project reveal">
       <div class="head">
         <span class="name">BankBridge</span>
-        <div class="tags">
-          <span class="tag tag-personal">Personal</span>
-        </div>
+        <div class="tags"><span class="tag tag-personal">Personal</span></div>
       </div>
       <div class="tech">ESP32-S3, C/C++, BLE ANCS, Kotlin, Socket.IO</div>
       <div class="desc">2-app bank notification: <strong>Android APK</strong> (push) + <strong>iOS ANCS bridge</strong> for real-time transfer alerts from 22 Vietnamese banks/e-wallets. 3-layer anti-fraud, hotspot provisioning, Socket.IO dashboard.</div>
-      <div class="links-row">
-        <a href="https://github.com/yuHz23/bankbridge" target="_blank">Source</a>
-      </div>
     </div>
 
     <div class="project reveal">
       <div class="head">
         <span class="name">AI Legal Assistant</span>
-        <div class="tags">
-          <span class="tag tag-production">Production</span>
-        </div>
+        <div class="tags"><span class="tag tag-production">Production</span></div>
       </div>
       <div class="tech">.NET 10, agentic RAG, TRON blockchain</div>
       <div class="desc">Agentic RAG over 9 Vietnamese law codes with citation tracking and <strong>TRON blockchain</strong> for AML compliance. Multi-turn conversation with tool-calling.</div>
-      <div class="links-row">
-        <a href="https://chat.rentaicoder.com/law.html" target="_blank">Live Demo</a>
-      </div>
     </div>
 
     <div class="project reveal">
       <div class="head">
         <span class="name">An Thinh Jewellery</span>
-        <div class="tags">
-          <span class="tag tag-client">Client</span>
-        </div>
+        <div class="tags"><span class="tag tag-client">Client</span></div>
       </div>
       <div class="tech">Astro, VNPay, Flatsome/WP</div>
       <div class="desc">Gold/silver e-commerce: full-stack Astro storefront + VNPay payment integration.</div>
@@ -345,9 +327,7 @@ footer {
     <div class="project reveal">
       <div class="head">
         <span class="name">VDG Freight (NVOCC)</span>
-        <div class="tags">
-          <span class="tag tag-client">Client</span>
-        </div>
+        <div class="tags"><span class="tag tag-client">Client</span></div>
       </div>
       <div class="tech">Rust, WASM, React, cargo-ndk</div>
       <div class="desc">Rust/WASM NVOCC management with in-browser Excel parsing and Android client (cargo-ndk).</div>
@@ -356,37 +336,25 @@ footer {
     <div class="project reveal">
       <div class="head">
         <span class="name">FundTrail</span>
-        <div class="tags">
-          <span class="tag tag-client">Client</span>
-        </div>
+        <div class="tags"><span class="tag tag-client">Client</span></div>
       </div>
       <div class="tech">Rust, Android, Gradle</div>
       <div class="desc">Fund tracking Android app. QA tester (3 rounds, 17+ bugs found including 2 P0) + build pipeline (cargo-ndk + Gradle).</div>
-      <div class="links-row">
-        <a href="https://github.com/vdg-solutions/VDG_FundTrail" target="_blank">Source</a>
-      </div>
     </div>
 
     <div class="project reveal">
       <div class="head">
-        <span class="name"><a href="https://github.com/yuHz23/bloodblink" target="_blank">BLOODBLINK</a></span>
-        <div class="tags">
-          <span class="tag tag-gend">GenD Arena 2026</span>
-        </div>
+        <span class="name">BLOODBLINK</span>
+        <div class="tags"><span class="tag tag-gend">GenD Arena 2026</span></div>
       </div>
       <div class="tech">Python, React, Docker, H3, PostGIS, ESP32-S3</div>
       <div class="desc">Blood-donation coordination: 4-ring SOS, ABO/RhD matching, FEFO, OSRM routing. 90-day sim (8 hospitals): <strong>+2.1pp</strong> fulfilment, <strong>-97.6%</strong> time, <strong>-36.5%</strong> waste. 226+ tests.</div>
-      <div class="links-row">
-        <a href="https://github.com/yuHz23/bloodblink" target="_blank">Source</a>
-      </div>
     </div>
 
     <div class="project reveal">
       <div class="head">
         <span class="name">POS System - Tax Module</span>
-        <div class="tags">
-          <span class="tag tag-production">Production</span>
-        </div>
+        <div class="tags"><span class="tag tag-production">Production</span></div>
       </div>
       <div class="tech">.NET, XML-DSig, Viettel/MISA/Softdreams APIs</div>
       <div class="desc">Tester + developer: e-invoicing feature 01/CNKD with 428+ tests, XML-DSig signing, 3 e-invoice provider adapters, TT50/2026 + ND70 compliance.</div>
@@ -394,38 +362,26 @@ footer {
 
     <div class="project reveal">
       <div class="head">
-        <span class="name"><a href="https://github.com/yuHz23/signband" target="_blank">Signband</a></span>
-        <div class="tags">
-          <span class="tag tag-thesis">Thesis</span>
-        </div>
+        <span class="name">Signband</span>
+        <div class="tags"><span class="tag tag-thesis">Thesis</span></div>
       </div>
       <div class="tech">ESP32-S3, PyTorch, FastAPI, React</div>
       <div class="desc">Wearable sign-language translator: IMU + sEMG sensor fusion to DL classifier on ESP32-S3. Bidirectional: Web Speech API + half-duplex echo cancellation. Sim2real (MMD), few-shot personalisation for low-resource VSL.</div>
-      <div class="links-row">
-        <a href="https://github.com/yuHz23/signband" target="_blank">Source</a>
-      </div>
     </div>
 
     <div class="project reveal">
       <div class="head">
         <span class="name">XangGate</span>
-        <div class="tags">
-          <span class="tag tag-production">Production</span>
-        </div>
+        <div class="tags"><span class="tag tag-production">Production</span></div>
       </div>
       <div class="tech">Lit 3, ASP.NET Core, Docker</div>
       <div class="desc">Claude API key gateway: domestic payment integration, rate limiting, usage tracking; QA + testing.</div>
-      <div class="links-row">
-        <a href="https://xanggate.rentaicoder.com" target="_blank">Live</a>
-      </div>
     </div>
 
     <div class="project reveal">
       <div class="head">
         <span class="name">SocialTraction</span>
-        <div class="tags">
-          <span class="tag tag-personal">Personal</span>
-        </div>
+        <div class="tags"><span class="tag tag-personal">Personal</span></div>
       </div>
       <div class="tech">Playwright, iptools, residential IP pool</div>
       <div class="desc">Headless Chrome automation via iptools + residential IP rotation to boost Facebook/X engagement.</div>
@@ -434,6 +390,23 @@ footer {
     <div class="project reveal">
       <div class="head">
         <span class="name">Elderly Companion Robot</span>
+        <div class="tags"><span class="tag tag-thesis">University</span></div>
+      </div>
+      <div class="tech">ESP32-S3, FreeRTOS, MQTT, Home Assistant</div>
+      <div class="desc">PTZ camera, 2-way voice, IR auto-dock, MPU6050 fall detection, 4x ultrasonic. Home Assistant integration.</div>
+    </div>
+
+    <div class="project reveal">
+      <div class="head">
+        <span class="name">RIS Phase Optimization</span>
+        <div class="tags"><span class="tag tag-thesis">Internship</span></div>
+      </div>
+      <div class="tech">PyTorch, DeepSets, PPO</div>
+      <div class="desc">PPO + DPG vs baselines for reconfigurable intelligent surface phase optimization. N = 16/32/64/128 scaling.</div>
+    </div>
+
+  </div>
+</section>
         <div class="tags">
           <span class="tag tag-thesis">University</span>
         </div>
