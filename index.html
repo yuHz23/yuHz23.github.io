@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ngo Hoang Huy - Embedded &amp; Full-Stack Engineer</title>
+<style>
+:root {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --border: #334155;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --accent2: #818cf8;
+  --green: #34d399;
+  --radius: 12px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:"Segoe UI",system-ui,-apple-system,sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+
+/* Nav */
+nav { position:sticky; top:0; z-index:50; background:rgba(15,23,42,.85); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); }
+nav .inner { max-width:960px; margin:auto; padding:12px 24px; display:flex; justify-content:space-between; align-items:center; }
+nav .logo { font-weight:700; font-size:1.05rem; color:var(--accent); }
+nav a { color:var(--muted); text-decoration:none; margin-left:20px; font-size:.9rem; transition:color .2s; }
+nav a:hover { color:var(--accent); }
+
+/* Hero */
+.hero { max-width:960px; margin:auto; padding:80px 24px 48px; }
+.hero h1 { font-size:2.4rem; font-weight:800; letter-spacing:-.02em; margin-bottom:8px; }
+.hero h1 span { color:var(--accent); }
+.hero .tagline { font-size:1.1rem; color:var(--muted); margin-bottom:16px; }
+.hero .summary { font-size:.95rem; color:var(--muted); max-width:680px; }
+.hero .links { margin-top:20px; display:flex; gap:12px; flex-wrap:wrap; }
+.hero .links a { display:inline-flex; align-items:center; gap:6px; padding:8px 18px; border-radius:8px; font-size:.88rem; font-weight:600; text-decoration:none; transition:transform .15s,box-shadow .15s; }
+.hero .links a:hover { transform:translateY(-1px); }
+.btn-primary { background:var(--accent); color:var(--bg); }
+.btn-outline { border:1.5px solid var(--border); color:var(--text); }
+.btn-outline:hover { border-color:var(--accent); color:var(--accent); }
+
+/* Section */
+section { max-width:960px; margin:auto; padding:32px 24px; }
+section h2 { font-size:1.3rem; font-weight:700; margin-bottom:20px; padding-bottom:8px; border-bottom:2px solid var(--accent); display:inline-block; }
+
+/* Skills grid */
+.skills-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:12px; }
+.skill-card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:14px 16px; }
+.skill-card b { display:block; font-size:.82rem; text-transform:uppercase; letter-spacing:.08em; color:var(--accent); margin-bottom:4px; }
+.skill-card span { font-size:.88rem; color:var(--text); }
+
+/* Project cards */
+.projects { display:grid; gap:16px; }
+.project { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:20px; transition:border-color .2s; }
+.project:hover { border-color:var(--accent); }
+.project .head { display:flex; justify-content:space-between; align-items:baseline; gap:8px; flex-wrap:wrap; margin-bottom:6px; }
+.project .name { font-size:1.05rem; font-weight:700; }
+.project .tag { font-size:.72rem; font-weight:600; padding:3px 10px; border-radius:20px; background:var(--accent); color:var(--bg); white-space:nowrap; }
+.project .tag.thesis { background:var(--accent2); }
+.project .tag.personal { background:var(--green); }
+.project .tag.client { background:#f59e0b; color:var(--bg); }
+.project .tag.production { background:#ef4444; color:#fff; }
+.project .tag.gend { background:var(--accent); }
+.project .tech { font-size:.82rem; color:var(--muted); font-style:italic; margin-bottom:8px; }
+.project .desc { font-size:.9rem; color:var(--text); line-height:1.5; }
+.project .desc strong { color:#fff; }
+
+/* Experience */
+.exp-item { margin-bottom:20px; }
+.exp-item .head { display:flex; justify-content:space-between; align-items:baseline; gap:8px; flex-wrap:wrap; margin-bottom:4px; }
+.exp-item .name { font-weight:700; font-size:.95rem; }
+.exp-item .name .sub { font-weight:400; color:var(--muted); font-style:italic; }
+.exp-item .date { font-size:.78rem; color:var(--muted); white-space:nowrap; }
+.exp-item .desc { font-size:.88rem; color:var(--text); line-height:1.55; }
+.exp-item .desc b { color:#fff; }
+
+/* Education */
+.edu-row { display:flex; justify-content:space-between; align-items:baseline; gap:8px; flex-wrap:wrap; margin-bottom:4px; }
+.edu-row .name { font-weight:700; }
+.edu-row .name .sub { font-weight:400; color:var(--muted); font-style:italic; }
+.edu-row .date { font-size:.78rem; color:var(--muted); }
+.edu-detail { font-size:.88rem; color:var(--muted); }
+
+/* Languages */
+.lang { font-size:.9rem; }
+.lang b { color:#fff; }
+
+footer { max-width:960px; margin:auto; padding:32px 24px; text-align:center; font-size:.78rem; color:var(--muted); border-top:1px solid var(--border); }
+
+@media(max-width:600px){
+  .hero h1 { font-size:1.7rem; }
+  .hero .links { flex-direction:column; }
+  .skills-grid { grid-template-columns:1fr; }
+  .project .head { flex-direction:column; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <div class="logo">NHH</div>
+    <div>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Ngo Hoang <span>Huy</span></h1>
+  <div class="tagline">Embedded &amp; Full-Stack Engineer</div>
+  <div class="summary">Final-year EE student. Embedded firmware through ML to production web on self-managed VPS. Vibe-coding workflow with AI agents (Claude Code, Cursor). Built 3 shipping products, a GenD Arena 2026 project, and a tax module integrating 3 e-invoice providers.</div>
+  <div class="links">
+    <a class="btn-primary" href="https://github.com/yuHz23" target="_blank">GitHub</a>
+    <a class="btn-outline" href="https://linkedin.com/in/yuHz23" target="_blank">LinkedIn</a>
+    <a class="btn-outline" href="mailto:huyhuy1623@gmail.com">Email</a>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card"><b>Languages</b><span>C/C++, Python, TypeScript/JS, C#, Rust, SQL</span></div>
+    <div class="skill-card"><b>Embedded</b><span>ESP32-S3, FreeRTOS, BLE/ANCS, I2C/SPI, KiCad, PlatformIO</span></div>
+    <div class="skill-card"><b>ML</b><span>PyTorch (GRU, EfficientNet-B5, DeepSets, PPO), mediapipe, RAG</span></div>
+    <div class="skill-card"><b>Web</b><span>.NET 10, FastAPI, Node.js, Next.js, React/Vite, Flutter, PostgreSQL/PostGIS</span></div>
+    <div class="skill-card"><b>AI Agents</b><span>Claude Code, Antigravity, Cursor, Ollama (primary workflow)</span></div>
+    <div class="skill-card"><b>Infra</b><span>Docker, Nginx, Cloudflare, Tailscale, systemd, Git</span></div>
+    <div class="skill-card"><b>Regulatory</b><span>TT 26/2013, ND70/2025, TT18/2026/BTC, XML-DSig</span></div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+
+  <div class="exp-item">
+    <div class="head">
+      <span class="name">Freelance Developer <span class="sub">- RentAI Labor Co., Ltd.</span></span>
+      <span class="date">Jul 2026 - present</span>
+    </div>
+    <div class="desc">
+      3 production products on VPS: legal AI assistant (.NET 10, agentic RAG, 9 law codes), Claude API key gateway (payment integration + QA), fractal 5-tier architecture (Cloudflare). Built rentaicoder.com. Full VPS stack: Nginx, Docker, systemd, certbot.
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="head">
+      <span class="name">Freelance Developer <span class="sub">- Direct Clients</span></span>
+      <span class="date">2024 - present</span>
+    </div>
+    <div class="desc">
+      <b>POS System</b> - Tester + developer; tax module 01/CNKD (428+ tests, XML-DSig, 3 e-invoice adapters: Viettel/MISA/Softdreams, S3a-HKD ledger).<br>
+      <b>An Thinh Jewellery</b> - Astro + VNPay gold/silver e-commerce (full-stack).<br>
+      <b>VDG Freight</b> - Rust/WASM NVOCC management, in-browser Excel parsing.<br>
+      <b>Legal chatbot</b> - .NET 10, Zalo OA + Messenger + web, RAG over 9 law codes.<br>
+      <b>FundTrail</b> - QA tester + Android build pipeline (cargo-ndk + Gradle).<br>
+      <b>SocialTraction</b> - Headless Chrome + iptools to boost Facebook/X engagement.
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+
+    <div class="project">
+      <div class="head">
+        <span class="name">BankBridge</span>
+        <span class="tag personal">Personal</span>
+      </div>
+      <div class="tech">ESP32-S3, C/C++, BLE ANCS, Kotlin, Socket.IO</div>
+      <div class="desc">2-app bank notification system: <strong>Android APK</strong> (push notifications) + <strong>iOS ANCS bridge</strong> (Apple Notification Centre Service) for real-time transfer alerts from 22 Vietnamese banks/e-wallets. 3-layer anti-fraud, hotspot provisioning.</div>
+    </div>
+
+    <div class="project">
+      <div class="head">
+        <span class="name">An Thinh Jewellery</span>
+        <span class="tag client">Client</span>
+      </div>
+      <div class="tech">Astro, VNPay, Flatsome/WP</div>
+      <div class="desc">Gold/silver e-commerce: full-stack Astro storefront + VNPay payment integration.</div>
+    </div>
+
+    <div class="project">
+      <div class="head">
+        <span class="name">VDG Freight (NVOCC)</span>
+        <span class="tag client">Client</span>
+      </div>
+      <div class="tech">Rust, WASM, React, cargo-ndk</div>
+      <div class="desc">Rust/WASM NVOCC management with in-browser Excel parsing and Android client (cargo-ndk).</div>
+    </div>
+
+    <div class="project">
+      <div class="head">
+        <span class="name">BLOODBLINK</span>
+        <span class="tag gend">GenD Arena 2026</span>
+      </div>
+      <div class="tech">Python, React, Docker, H3, PostGIS, ESP32-S3</div>
+      <div class="desc">Blood-donation coordination: 4-ring SOS, ABO/RhD matching, FEFO, OSRM routing. 90-day simulation (8 hospitals): <strong>+2.1pp</strong> fulfilment, <strong>-97.6%</strong> response time, <strong>-36.5%</strong> waste. 226+ tests.</div>
+    </div>
+
+    <div class="project">
+      <div class="head">
+        <span class="name">POS System - Tax Module</span>
+        <span class="tag production">Production</span>
+      </div>
+      <div class="tech">.NET, XML-DSig, Viettel/MISA/Softdreams APIs</div>
+      <div class="desc">Tester + developer: e-invoicing feature 01/CNKD with 428+ tests, XML-DSig signing, 3 e-invoice provider adapters, TT50/2026 + ND70 compliance.</div>
+    </div>
+
+    <div class="project">
+      <div class="head">
+        <span class="name">Signband</span>
+        <span class="tag thesis">Thesis</span>
+      </div>
+      <div class="tech">ESP32-S3, PyTorch, FastAPI, React</div>
+      <div class="desc">Wearable sign-language translator: IMU + sEMG sensor fusion to deep-learning classifier on ESP32-S3. Bidirectional: Web Speech API + half-duplex echo cancellation. Sim2real (MMD), few-shot personalisation for low-resource VSL.</div>
+    </div>
+
+    <div class="project">
+      <div class="head">
+        <span class="name">SocialTraction</span>
+        <span class="tag personal">Personal</span>
+      </div>
+      <div class="tech">Playwright, iptools, residential IP pool</div>
+      <div class="desc">Headless Chrome automation via iptools + residential IP rotation to boost Facebook/X engagement.</div>
+    </div>
+
+    <div class="project">
+      <div class="head">
+        <span class="name">XangGate</span>
+        <span class="tag production">Production</span>
+      </div>
+      <div class="tech">Lit 3, ASP.NET Core, Docker</div>
+      <div class="desc">Claude API key gateway: domestic payment integration, rate limiting, usage tracking; QA + testing.</div>
+    </div>
+
+    <div class="project">
+      <div class="head">
+        <span class="name">AI Legal Assistant</span>
+        <span class="tag production">Production</span>
+      </div>
+      <div class="tech">.NET 10, agentic RAG, TRON blockchain</div>
+      <div class="desc">Agentic RAG over 9 Vietnamese law codes with citation tracking and TRON blockchain for AML compliance. Multi-turn conversation with tool-calling.</div>
+    </div>
+
+    <div class="project">
+      <div class="head">
+        <span class="name">BankBridge (legacy)</span>
+        <span class="tag personal">Personal</span>
+      </div>
+      <div class="tech">ESP32-S3, C/C++, BLE ANCS, Kotlin</div>
+      <div class="desc">Parses notifications from 22 Vietnamese banking/e-wallet apps. 3-layer anti-fraud detection, hotspot provisioning, real-time Socket.IO dashboard.</div>
+    </div>
+
+    <div class="project">
+      <div class="head">
+        <span class="name">Elderly Companion Robot</span>
+        <span class="tag thesis">University</span>
+      </div>
+      <div class="tech">ESP32-S3, FreeRTOS, MQTT, Home Assistant</div>
+      <div class="desc">PTZ camera, 2-way voice, IR auto-dock, MPU6050 fall detection, 4x ultrasonic. Home Assistant integration.</div>
+    </div>
+
+    <div class="project">
+      <div class="head">
+        <span class="name">RIS Phase Optimization</span>
+        <span class="tag thesis">Internship</span>
+      </div>
+      <div class="tech">PyTorch, DeepSets, PPO</div>
+      <div class="desc">PPO + DPG vs baselines for reconfigurable intelligent surface phase optimization. N = 16/32/64/128 scaling.</div>
+    </div>
+
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="edu-row">
+    <span class="name">B.E. Electrical Engineering <span class="sub">- School of Electrical Engineering, HCMIU (VNUHCM)</span></span>
+    <span class="date">Sep 2021 - Expected Dec 2026</span>
+  </div>
+  <div class="edu-detail">Embedded Systems &middot; DSP &middot; Machine Learning &middot; Power Electronics &middot; Control Systems</div>
+</section>
+
+<section id="languages">
+  <h2>Languages</h2>
+  <div class="lang"><b>Vietnamese</b> native &middot; <b>English</b> fluent (bilingual degree, technical writing both)</div>
+</section>
+
+<footer>
+  Ngo Hoang Huy &middot; 2026 &middot; Built with Claude Code
+</footer>
+
+</body>
+</html>
