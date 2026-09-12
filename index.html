@@ -161,17 +161,13 @@ section h2::before {
 .project .desc .tech-stack { color:var(--muted); font-style:italic; }
 
 /* Experience */
-.exp-item {
+.exp-header {
   background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
-  padding:20px; margin-bottom:14px; transition:all .3s;
+  padding:16px 22px; margin-bottom:14px;
 }
-.exp-item:hover { border-color:rgba(94,234,212,.25); box-shadow:var(--glow); }
-.exp-item .head { display:flex; justify-content:space-between; align-items:baseline; gap:8px; flex-wrap:wrap; margin-bottom:6px; }
-.exp-item .name { font-weight:700; font-size:.95rem; }
-.exp-item .name .sub { font-weight:400; color:var(--muted); font-style:italic; }
-.exp-item .date { font-size:.78rem; color:var(--muted); white-space:nowrap; }
-.exp-item .desc { font-size:.88rem; color:var(--text); line-height:1.6; }
-.exp-item .desc b { color:#fff; }
+.exp-role { font-weight:700; font-size:.95rem; }
+.exp-role .sub { font-weight:400; color:var(--muted); font-style:italic; }
+.exp-role .date { font-size:.78rem; color:var(--muted); float:right; white-space:nowrap; }
 
 /* Education */
 .edu-card {
@@ -276,24 +272,91 @@ footer {
 
 <section id="experience">
   <h2>Experience</h2>
+  <div class="exp-header reveal">
+    <div class="exp-role">Freelance Developer <span class="sub">: RentAI Labor Co., Ltd.</span> <span class="date">Apr 2026 - present</span></div>
+  </div>
+  <div class="projects">
 
-  <div class="exp-item reveal">
-    <div class="head">
-      <span class="name">Freelance Developer <span class="sub">: RentAI Labor Co., Ltd.</span></span>
-      <span class="date">Apr 2026 - present</span>
+    <div class="project reveal">
+      <div class="head"><span class="name">POS System <span class="tag tag-production">Production</span></span></div>
+      <div class="desc">
+        .NET, XML-DSig<br>
+        Tax module 01/CNKD with 3 e-invoice adapters (Viettel/MISA/Softdreams) and regulatory compliance.
+      </div>
     </div>
-    <div class="desc">
-      <b>POS System</b> : Tester + developer; tax module 01/CNKD (3 e-invoice adapters: Viettel/MISA/Softdreams, regulatory compliance).<br>
-      <b>An Thịnh Jewellery</b> : Astro + VNPay gold/silver e-commerce.<br>
-      <b>Legal chatbot</b> : .NET 10, web, RAG over 9 law codes.<br>
-      <b>Edu chatbot</b> : Zalo OA + Messenger, .NET 10, RAG.<br>
-      <b>XangGate</b> : Claude API key gateway (Lit 3, payment integration, usage tracking).<br>
-      <b>ACP</b> : WordPress + Flatsome corporate site (acp.net.vn), Cloudflare CDN.<br>
-      <b>VDG Freight</b> : NVOCC management platform (Rust/WASM/React, in-browser Excel parsing, Android client).<br>
-      <b>SocialTraction</b> : Headless Chrome automation with residential IP rotation (Playwright/iptools).<br>
-      <b>FundTrail</b> : Fund tracking Android app - QA tester + build pipeline (Rust/cargo-ndk + Gradle).<br>
-      <b>Full VPS stack</b>: Nginx, Docker, systemd, certbot, TLS.
+
+    <div class="project reveal">
+      <div class="head"><span class="name">An Thịnh Jewellery <span class="tag tag-client">Client</span></span></div>
+      <div class="desc">
+        Astro, VNPay, Flatsome<br>
+        Gold/silver e-commerce storefront with VNPay payment integration.
+      </div>
     </div>
+
+    <div class="project reveal">
+      <div class="head"><span class="name">Legal chatbot <span class="tag tag-production">Production</span></span></div>
+      <div class="desc">
+        .NET 10, RAG, Web<br>
+        AI chatbot answering legal questions across 9 Vietnamese law codes via web interface.
+      </div>
+    </div>
+
+    <div class="project reveal">
+      <div class="head"><span class="name">Edu chatbot <span class="tag tag-production">Production</span></span></div>
+      <div class="desc">
+        .NET 10, RAG, Zalo OA, Messenger<br>
+        Educational chatbot deployed on Zalo OA and Meta Messenger platforms.
+      </div>
+    </div>
+
+    <div class="project reveal">
+      <div class="head"><span class="name">XangGate <span class="tag tag-production">Production</span></span></div>
+      <div class="desc">
+        Lit 3, ASP.NET Core, Docker<br>
+        Claude API key gateway with domestic payment integration and usage tracking.
+      </div>
+    </div>
+
+    <div class="project reveal">
+      <div class="head"><span class="name">ACP <span class="tag tag-client">Client</span></span></div>
+      <div class="desc">
+        WordPress, Flatsome, Cloudflare<br>
+        Corporate website (acp.net.vn) with Cloudflare CDN and custom theme.
+      </div>
+    </div>
+
+    <div class="project reveal">
+      <div class="head"><span class="name">VDG Freight <span class="tag tag-client">Client</span></span></div>
+      <div class="desc">
+        Rust, WASM, React<br>
+        NVOCC management platform with in-browser Excel parsing and Android client.
+      </div>
+    </div>
+
+    <div class="project reveal">
+      <div class="head"><span class="name">SocialTraction <span class="tag tag-client">Client</span></span></div>
+      <div class="desc">
+        Playwright, iptools<br>
+        Headless Chrome automation with residential IP rotation to boost Facebook/X engagement.
+      </div>
+    </div>
+
+    <div class="project reveal">
+      <div class="head"><span class="name">FundTrail <span class="tag tag-client">Client</span></span></div>
+      <div class="desc">
+        Rust, Android, Gradle<br>
+        Fund tracking Android app. QA tester + build pipeline (cargo-ndk + Gradle).
+      </div>
+    </div>
+
+    <div class="project reveal">
+      <div class="head"><span class="name">Full VPS Stack <span class="tag tag-production">Infra</span></span></div>
+      <div class="desc">
+        Nginx, Docker, systemd, certbot, TLS<br>
+        Self-managed VPS hosting for all production deployments.
+      </div>
+    </div>
+
   </div>
 </section>
 
